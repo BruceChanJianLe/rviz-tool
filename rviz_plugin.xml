@@ -1,0 +1,9 @@
+<library path="lib/libmbfGoal">
+
+  <class name="rviz-tool/mbfGoal" type="rviz::mbfGoal" base_class_type="rviz::Tool">
+    <description>
+      A 2D goal tool for move base flex.
+    </description>
+  </class>
+
+</library>
