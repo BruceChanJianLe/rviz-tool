@@ -62,10 +62,8 @@ set(${PROJECT_NAME}_HDRS
 
 # Wrap cpp for QT
 if(rviz_QT_VERSION VERSION_LESS "5")
-    message(STATUS "Generate header for ui with rviz_QT_VERSION: ${rviz_QT_VERSION}")
     qt4_wrap_cpp(${PROJECT_NAME}_MOCS ${${PROJECT_NAME}_HDRS})
 else()
-    message(STATUS "Generate header for ui with rviz_QT_VERSION: ${rviz_QT_VERSION}")
     qt5_wrap_cpp(${PROJECT_NAME}_MOCS ${${PROJECT_NAME}_HDRS})
 endif()
 
