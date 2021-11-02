@@ -19,7 +19,6 @@
 // msgs and services
 #include <mbf_msgs/MoveBaseAction.h>
 #include <mbf_msgs/MoveBaseGoal.h>
-#include <geometry_msgs/TransformStamped.h>
 #include <geometry_msgs/PoseStamped.h>
 
 // STL
