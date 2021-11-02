@@ -42,9 +42,9 @@ namespace rviz
         void updateTopic();
 
     private:
-        StringProperty * topic_property_;
-        StringProperty * planner_property_;
-        StringProperty * controller_property_;
+        std::shared_ptr<StringProperty> topic_property_;
+        std::shared_ptr<StringProperty> planner_property_;
+        std::shared_ptr<StringProperty> controller_property_;
 
         // Move base flex action client
         std::shared_ptr<actionlib::SimpleActionClient<mbf_msgs::MoveBaseAction>> ac_;

@@ -9,25 +9,19 @@ namespace rviz
     {
         shortcut_key_ = 'g';
 
-        topic_property_ = new StringProperty( "Topic", "/move_base_flex/move_base",
+        topic_property_ = std::make_shared<StringProperty>( "Topic", "/move_base_flex/move_base",
                                                 "The topic on which to publish navigation goals.",
                                                 getPropertyContainer(), SLOT( updateTopic() ), this );
-        planner_property_ = new StringProperty( "Planner", "navfn/NavfnROS",
+        planner_property_ = std::make_shared<StringProperty>( "Planner", "navfn/NavfnROS",
                                                 "The topic on which to publish navigation goals.",
                                                 getPropertyContainer(), SLOT( updateTopic() ), this );
-        controller_property_ = new StringProperty( "Controller", "base_local_planner/TrajectoryPlannerROS",
+        controller_property_ = std::make_shared<StringProperty>( "Controller", "base_local_planner/TrajectoryPlannerROS",
                                                 "The topic on which to publish navigation goals.",
                                                 getPropertyContainer(), SLOT( updateTopic() ), this );
     }
 
     mbfGoal::~mbfGoal()
     {
-        if(topic_property_)
-            delete topic_property_;
-        if(planner_property_)
-            delete planner_property_;
-        if(controller_property_)
-            delete controller_property_;
     }
 
     void mbfGoal::onInitialize()
