@@ -16,3 +16,4 @@ Include `rviz/frame_manager.h` in your header file. And in the `onInitialize()` 
 
 ## Reference
 - New tool ROS wiki [link_wiki](http://docs.ros.org/en/kinetic/api/rviz_plugin_tutorials/html/tool_plugin_tutorial.html)
+- Rviz tool that uses tf [github_link](https://github.com/nobleo/rviz_satellite/blob/master/src/aerialmap_display.h)
